@@ -1,0 +1,54 @@
+基础:
+/menu
+/teleport                                                                   hszd                Atlantis
+/home
+/sethome
+领地系统:
+/res create 创建领地 需要先用木锄左右键设置好领地大小
+/res tp 领地名(luosc领地专门售卖物品 ykdlb领地为便携传送点 方便前往电鹿所住之地)
+/res auto 以玩家自己为中心创建能创建的最大领地
+/res tpset 设定领地的传送点
+/res padd 向领地添加玩家
+/res pdel 从领地删除玩家
+拍卖系统:
+/ca gui [bid/buy/sell] 进入拍卖系统界面(左边那个括号里的任选一种输即可)
+/ca sell 价格 数量 将手中物品以出售形式上架
+/ca bid 价格 数量 将手中物品以拍卖形式上架
+/ca mail 领取你在拍卖系统里得到的物品
+我认为以上这些是目前玩家们用的较多的 服务器内还有很多
+
+“/res set 123 flags true/false”（例）来设置权限，其中：
+
+①123是领地名，不填则默认为当前所处领地；
+
+②flags是权限，有：
+
+move（移动）；build（改变地形）；place（放置物品）；destroy（破坏）；use（使用）；
+
+container（打开箱子）；pvp（玩家伤害）；tp（传送到该领地）；ignite（点火）；
+
+firespread（火的传播）；bucket（桶的使用）；flow（后面两个总括）；lavaflow（岩浆流动）
+
+waterflow（水的流动）；creeper（JJ怪爆炸）；tnt（tnt爆炸）；monsters（怪物出生）；
+
+animals（动物出生）；subzone（子空间）；healing（治疗）。 piston(活塞)(活塞不适用于单人命令)
+
+③true/false是权限状态，若输入true则为开启，false则为关闭。
+
+单人权限设置 拿 destroy 来举例 输入 /res pset 领地名字 玩家名字 destroy t 
+
+四、子空间设置指令：
+
+“/res subzone 123 abc”（例）设置母领地为123的名为abc的子空间， 该区域的权限设置和移除则需要将领地名变为123.abc，无则默认为当前所处领地（在子空间则为子空间）。
+
+五、领地信息设置指令：
+
+“/res message 123 enter(leave) ABC”（例）设置领地123的进入（离开）时的提示信息为ABC，123处不填，则默认为当前所处领地；
+
+特别地，在提示信息中可以添加：
+
+%player - 在提示信息中显示进出领地的玩家名
+
+%owner - 在提示信息中显示领主
+
+%residence - 在提示信息中显示该领地
